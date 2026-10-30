@@ -6,5 +6,5 @@ variable "location" {
 variable "home_ip" {
   type        = string
   description = "Your home public IP (without /32)"
-  default     = "REDACTED"
+  # no default — set it in terraform.tfvars
 }
