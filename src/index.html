@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Web Lab</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 700px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { margin-bottom: 0.5rem; }
+    code { background: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 4px; }
+  </style>
 </head>
 <body>
-  <h1>Hello from Azure App Service</h1>
-  <p>This site is locked to my home IP.</p>
-  <p>Last updated: (you will change this later)</p>
+  <h1>Azure Web Lab</h1>
+  <p>This static site was deployed to Azure App Service using infrastructure-as-code and GitHub Actions.</p>
+
+  <h2>What was built</h2>
+  <ul>
+    <li>Resource group <code>rg-web-lab</code> in East US</li>
+    <li>App Service plan (Free F1) + App Service <code>app-web-lab-zo8pma</code></li>
+    <li>Terraform configuration that creates the above resources</li>
+    <li>GitHub Actions workflow that deploys the <code>src/</code> folder on every push to <code>main</code></li>
+    <li>Service principal + GitHub secret for secure Azure login</li>
+  </ul>
+
+  <h2>How updates work</h2>
+  <p>Edit files in <code>src/</code>, commit, and push to <code>main</code>. The workflow automatically redeploys the site.</p>
+
+  <p>Last updated: <strong>October 29, 2026</strong></p>
 </body>
 </html>
